@@ -1,0 +1,153 @@
+<style>
+  .verification-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+    padding: 0 80px 80px 12px;
+  }
+
+  @media (max-width: 991px) {
+    .verification-container {
+      padding-right: 20px;
+    }
+  }
+
+  .verification-image {
+    aspect-ratio: 3.45;
+    object-fit: auto;
+    object-position: center;
+    width: 538px;
+    max-width: 100%;
+  }
+
+  .verification-content {
+    align-self: center;
+    display: flex;
+    margin-top: 39px;
+    width: 962px;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .verification-title {
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    align-self: center;
+    font: 45px/42px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .verification-title {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 41px;
+    }
+  }
+
+  .verification-details {
+    justify-content: space-between;
+    border-radius: 12px;
+    border: 1px solid #b3b3b3;
+    background-color: #fff;
+    display: flex;
+    margin-top: 120px;
+    flex-direction: column;
+    font-size: 36px;
+    padding: 24px 32px 28px;
+  }
+
+  @media (max-width: 991px) {
+    .verification-details {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .verification-description {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 42px;
+  }
+
+  @media (max-width: 991px) {
+    .verification-description {
+      max-width: 100%;
+    }
+  }
+
+  .resend-email-button {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    border-radius: 12.664px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border: 1px solid #ad9b9b;
+    background-color: #f5dbdb;
+    align-self: center;
+    margin-top: 66px;
+    line-height: 82%;
+    padding: 21px 17px;
+  }
+
+  @media (max-width: 991px) {
+    .resend-email-button {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .try-another-method {
+    align-self: center;
+    margin-top: 65px;
+    font: 700 32px/92% Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .try-another-method {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .help-text {
+    color: #ff0101;
+    margin: 66px 19px 0;
+    font: 32px/30px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .help-text {
+      max-width: 100%;
+      margin: 40px 10px 0 0;
+    }
+  }
+</style>
+
+<div class="verification-container">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d92764a87944edb734f12bd6e8a1a30f36c0aecf78a81a2b18af5bae56311fc?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Verification steps illustration" class="verification-image" />
+  
+  <div class="verification-content">
+    <h1 class="verification-title">Verification Steps</h1>
+    
+    <div class="verification-details">
+      <p class="verification-description">
+        <br /><br />
+        We've sent a verification link to your email. Please check your <strong>inbox</strong> (and <strong>spam</strong> folder) and click on the link to activate your account.
+      </p>
+      
+      <button class="resend-email-button">RESEND EMAIL</button>
+      
+      <p class="try-another-method">Try another verification method</p>
+      
+      <p class="help-text">
+        Need help? <span style="color: rgba(255, 1, 1, 1)">Contact Us</span>
+      </p>
+    </div>
+  </div>
+</div>

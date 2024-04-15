@@ -1,0 +1,360 @@
+<style>
+  .container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 80px 54px;
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    max-width: 1344px;
+    gap: 20px;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100%;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .logo {
+    aspect-ratio: 3.33;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .logo {
+      max-width: 100%;
+    }
+  }
+
+  .help-button {
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(36, 99, 235, 1);
+    background-color: #dae6ff;
+    display: flex;
+    gap: 8px;
+    margin: auto 0;
+    padding: 13px 16px;
+  }
+
+  @media (max-width: 991px) {
+    .help-button {
+      padding: 0 20px;
+    }
+  }
+
+  .help-icon {
+    aspect-ratio: 0.64;
+    object-fit: auto;
+    object-position: center;
+    width: 21px;
+  }
+
+  .help-text {
+    font-family: Inter, sans-serif;
+    margin: auto 0;
+  }
+
+  .main-content {
+    margin-top: 89px;
+    width: 100%;
+    max-width: 1499px;
+  }
+
+  @media (max-width: 991px) {
+    .main-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .row {
+    gap: 20px;
+    display: flex;
+  }
+
+  @media (max-width: 991px) {
+    .row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  @media (max-width: 991px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .welcome-section {
+    justify-content: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    color: #000;
+    width: 100%;
+    margin: auto 0;
+  }
+
+  @media (max-width: 991px) {
+    .welcome-section {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .welcome-title {
+    color: #ff0101;
+    text-align: center;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    font: 700 64px/64px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .welcome-title {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 44px;
+    }
+  }
+
+  .welcome-description {
+    margin-top: 12px;
+    font: 400 20px/32px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .welcome-description {
+      max-width: 100%;
+    }
+  }
+
+  .action-buttons {
+    justify-content: center;
+    mix-blend-mode: darken;
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    padding: 11px 65px 0;
+  }
+
+  @media (max-width: 991px) {
+    .action-buttons {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .create-account-button {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    border-radius: 12.664px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    border: 1px solid rgba(173, 155, 155, 1);
+    background-color: #f5dbdb;
+    line-height: 98%;
+    padding: 21px 17px;
+  }
+
+  @media (max-width: 991px) {
+    .create-account-button {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .access-account-button {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    border-radius: 12.66px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    border: 1px solid rgba(36, 99, 235, 1);
+    background-color: #c4d4f7;
+    margin-top: 12px;
+    line-height: 93%;
+    padding: 21px 16px 0;
+  }
+
+  @media (max-width: 991px) {
+    .access-account-button {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .image-column {
+      width: 100%;
+    }
+  }
+
+  .main-image {
+    aspect-ratio: 1.18;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 991px) {
+    .main-image {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .footer {
+    align-self: end;
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    line-height: 92%;
+    margin: 77px 208px 0 0;
+    padding: 11px 80px 11px 12px;
+  }
+
+  @media (max-width: 991px) {
+    .footer {
+      flex-wrap: wrap;
+      padding-right: 20px;
+      margin: 40px 10px 0 0;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+
+  @media (max-width: 991px) {
+    .footer-links {
+      flex-wrap: wrap;
+    }
+  }
+
+  .contact-us {
+    font-family: Inter, sans-serif;
+  }
+
+  .accessibility {
+    font-family: Inter, sans-serif;
+  }
+
+  .privacy-policy {
+    color: #1a1a1a;
+    font-family: Inter, sans-serif;
+  }
+
+  .footer-links-right {
+    display: flex;
+    gap: 12px;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+
+  .terms-of-service {
+    font-family: Inter, sans-serif;
+  }
+
+  .faq {
+    font-family: Inter, sans-serif;
+  }
+</style>
+
+<div class="container">
+  <header class="header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e8b8a3a31b1e861a6e81f8ce70a7477dc87e3265f0df3cc4f9a1b97cb9110d7?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Guardian Angel logo" class="logo" />
+    <div class="help-button">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e850d22c5bc65afae800e27b3000bb24d836ab4557142fe8d2e7a06b224ba04?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Help icon" class="help-icon" />
+      <div class="help-text">HELP</div>
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <div class="row">
+      <div class="column">
+        <section class="welcome-section">
+          <h1 class="welcome-title">
+            Welcome to <span style="font-weight: 500; color: rgba(255, 1, 1, 1)">GuardianAngel</span>
+          </h1>
+          <p class="welcome-description">
+            <br /><br />
+            <span style="font-size: 32px">Supporting your golden years with care and convenience.</span>
+            <br /><br />
+            <span style="font-size: 32px">Please select one of the following options to continue.</span>
+          </p>
+          <div class="action-buttons">
+            <button class="create-account-button">CREATE NEW ACCOUNT</button>
+            <button class="access-account-button">ACCESS MY ACCOUNT</button>
+          </div>
+        </section>
+      </div>
+      <div class="image-column">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/686febdfb9204fb9ac6ecc7921eeda80128555368a1ada86bfeb9c2dd918b0eb?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Elderly couple smiling" class="main-image" />
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#" class="contact-us">Contact us</a>
+      <a href="#" class="accessibility">Accessibility</a>
+      <a href="#" class="privacy-policy">Privacy Policy</a>
+    </div>
+    <div class="footer-links-right">
+      <a href="#" class="terms-of-service">Terms of Service</a>
+      <a href="#" class="faq">FAQ</a>
+    </div>
+  </footer>
+</div>

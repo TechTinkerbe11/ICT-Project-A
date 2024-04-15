@@ -1,0 +1,200 @@
+<style>
+  .container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 800;
+    text-align: center;
+    padding: 0 80px 77px 12px;
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding-right: 20px;
+    }
+  }
+
+  .header-image {
+    aspect-ratio: 3.45;
+    object-fit: contain;
+    width: 538px;
+    align-self: start;
+    max-width: 100%;
+  }
+
+  .header-text {
+    color: #b3b3b3;
+    -webkit-text-stroke: 1px #000;
+    text-transform: capitalize;
+    border: 1px solid #000;
+    margin-top: 20px;
+    width: 1283px;
+    font: 800 45px/42px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .header-text {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 41px;
+    }
+  }
+
+  .verification-options {
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid #b3b3b3;
+    background-color: #fff;
+    display: flex;
+    margin-top: 47px;
+    width: 1100px;
+    max-width: 100%;
+    flex-direction: column;
+    font-size: 32px;
+    color: #000;
+    padding: 24px 32px 28px;
+  }
+
+  @media (max-width: 991px) {
+    .verification-options {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .verification-content {
+    display: flex;
+    width: 856px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-icon {
+    aspect-ratio: 1.16;
+    object-fit: contain;
+    width: 83px;
+  }
+
+  .email-button {
+    justify-content: center;
+    border-radius: 12.664px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border: 1px solid #ad9b9b;
+    background-color: #f5dbdb;
+    margin-top: 28px;
+    padding: 21px 17px;
+    font: 800 36px/82% Inter, sans-serif;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 991px) {
+    .email-button {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .email-description {
+    font: 300 32px/131% Inter, sans-serif;
+    align-self: stretch;
+    margin-top: 28px;
+  }
+
+  @media (max-width: 991px) {
+    .email-description {
+      max-width: 100%;
+    }
+  }
+
+  .sms-icon {
+    aspect-ratio: 0.95;
+    object-fit: contain;
+    width: 83px;
+    margin-top: 28px;
+  }
+
+  .sms-button {
+    justify-content: center;
+    align-items: center;
+    border-radius: 12.66px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border: 1px solid #2463eb;
+    background-color: #c4d4f7;
+    margin-top: 28px;
+    width: 460px;
+    max-width: 100%;
+    text-transform: uppercase;
+    padding: 22px 16px;
+    font: 800 36px/78% Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .sms-button {
+      padding: 0 20px;
+    }
+  }
+
+  .sms-description {
+    font: 300 32px/131% Inter, sans-serif;
+    align-self: stretch;
+    margin-top: 28px;
+  }
+
+  @media (max-width: 991px) {
+    .sms-description {
+      max-width: 100%;
+    }
+  }
+
+  .help-text {
+    font: 400 32px/30px Inter, sans-serif;
+    align-self: stretch;
+    margin: 28px 19px 0;
+  }
+
+  .contact-link {
+    color: #ff0101;
+  }
+
+  @media (max-width: 991px) {
+    .help-text {
+      max-width: 100%;
+      margin-right: 10px;
+    }
+  }
+</style>
+
+<div class="container">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d92764a87944edb734f12bd6e8a1a30f36c0aecf78a81a2b18af5bae56311fc?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Header image" class="header-image" />
+  
+  <div class="header-text">
+    <br />
+    <h1>Choose Verification Method</h1>
+    <br /><br />
+    <p>
+      To keep your account secure, we need to verify your identity. Please choose how you'd like to receive your verification code.
+    </p>
+    <br /><br /><br /><br /><br /><br /><br />
+  </div>
+  
+  <div class="verification-options">
+    <div class="verification-content">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25e4866b207154b733a7e2f953de7d7e0a75761aa664bf979b333dab34b72c61?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Email icon" class="email-icon" />
+      <button class="email-button">Verify via Email</button>
+      <p class="email-description">
+        We'll send a verification link to your email address.
+      </p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5d10529e7d90a9eed6f9227021732160d2450bd41552d73fd8528d4600476a4?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="SMS icon" class="sms-icon" />
+      <button class="sms-button">Verify via SMS</button>
+      <p class="sms-description">
+        We'll send a verification code to your mobile phone.
+      </p>
+      <p class="help-text">
+        Need help? <a href="#" class="contact-link">Contact Us</a>
+      </p>
+    </div>
+  </div>
+</div>

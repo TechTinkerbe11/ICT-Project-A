@@ -1,0 +1,433 @@
+<style>
+  .container {
+    background-color: #fff;
+    padding: 0 31px 0 0;
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding-right: 20px;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .content {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .sidebar {
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 5px;
+    font-weight: 800;
+    margin-top: 30px;
+  }
+
+  .profile {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-self: start;
+  }
+
+  .avatar {
+    width: 307px;
+    aspect-ratio: 3.45;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    color: #1a1a1a;
+    padding: 163px 34px 0;
+  }
+
+  @media (max-width: 991px) {
+    .nav-menu {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .nav-item-home {
+    font: 40px Open Sans, sans-serif;
+    padding: 26px 49px;
+    border: 1px solid rgba(122, 122, 122, 1);
+    border-radius: 10px;
+    background-color: #c4d4f7;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: start;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-home {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+
+  .nav-item-medications {
+    margin-top: 49px;
+    font: 36px Open Sans, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-medications {
+      margin-top: 40px;
+    }
+  }
+
+  .nav-item-meals {
+    margin-top: 41px;
+    font: 36px Open Sans, sans-serif;
+    align-self: center;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-meals {
+      margin-top: 40px;
+    }
+  }
+
+  .nav-item-activities {
+    margin-top: 42px;
+    font: 40px Open Sans, sans-serif;
+    align-self: center;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-activities {
+      margin-top: 40px;
+    }
+  }
+
+  .nav-item-messages {
+    margin: 49px 22px 0;
+    font: 40px Open Sans, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-messages {
+      margin: 40px 10px 0;
+    }
+  }
+
+  .nav-item-family {
+    margin-top: 37px;
+    font: 40px Open Sans, sans-serif;
+    align-self: center;
+  }
+
+  .nav-item-support {
+    margin: 39px 0 0 11px;
+    font: 40px Open Sans, sans-serif;
+    align-self: start;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-support {
+      margin-left: 10px;
+    }
+  }
+
+  .nav-item-signout {
+    margin-top: 116px;
+    padding: 16px 39px;
+    font: 36px Open Sans, sans-serif;
+    border-radius: 10px;
+    background-color: #f5dbdb;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-signout {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .user-email {
+    margin-top: 44px;
+    padding: 23px 9px;
+    font: 20px Open Sans, sans-serif;
+    color: #000;
+    border: 1px solid rgba(122, 122, 122, 1);
+    border-radius: 10px;
+    background-color: #f5dbdb;
+    white-space: nowrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    .user-email {
+      margin-top: 40px;
+      white-space: initial;
+    }
+  }
+
+  .divider {
+    width: 7px;
+    height: 1117px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: #000;
+  }
+
+  .main-content {
+    width: 81%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    .main-content {
+      width: 100%;
+    }
+  }
+
+  .search-bar {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  @media (max-width: 991px) {
+    .search-bar {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .search-input {
+    padding: 18px 23px;
+    font: 600 32px Open Sans, sans-serif;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    align-self: center;
+  }
+
+  @media (max-width: 991px) {
+    .search-input {
+      flex-wrap: wrap;
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+
+  .search-icon {
+    width: 23px;
+    aspect-ratio: 0.96;
+    object-fit: cover;
+    fill: #1a1a1a;
+    align-self: start;
+  }
+
+  .search-text {
+    font: 32px Open Sans, sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+
+  @media (max-width: 991px) {
+    .search-text {
+      max-width: 100%;
+    }
+  }
+
+  .dashboard {
+    margin-top: 77px;
+  }
+
+  @media (max-width: 991px) {
+    .dashboard {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .dashboard-grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .dashboard-grid {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .dashboard-item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    .dashboard-item {
+      width: 100%;
+    }
+  }
+
+  .medication-schedule {
+    margin-top: 4px;
+    padding: 346px 37px 80px;
+    font: 800 40px Open Sans, sans-serif;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #c4d4f7;
+    flex-grow: 1;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .medication-schedule {
+      margin-top: 40px;
+      padding: 40px 20px 0;
+    }
+  }
+
+  .todays-meals {
+    padding: 362px 44px 80px;
+    font: 800 40px Open Sans, sans-serif;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #c4d4f7;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .todays-meals {
+      margin-top: 40px;
+      padding: 40px 20px 0;
+    }
+  }
+
+  .activities {
+    padding: 353px 14px 80px;
+    font: 800 36px Open Sans, sans-serif;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #c4d4f7;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .activities {
+      margin-top: 40px;
+      padding: 40px 20px 0 0;
+    }
+  }
+
+  .connect {
+    padding: 363px 60px 80px;
+    font: 800 40px Open Sans, sans-serif;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #c4d4f7;
+    white-space: nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .connect {
+      margin-top: 40px;
+      white-space: initial;
+      padding: 40px 20px 0;
+    }
+  }
+</style>
+
+<div class="container">
+  <div class="content">
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <div class="profile">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b33f407b0962ced5cfd36d2c9da55e423d0d53ff3c3c3398bf8f8fb67a5485dc?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="User avatar" class="avatar" />
+          <nav class="nav-menu">
+            <div class="nav-item-home">Home</div>
+            <div class="nav-item-medications">Medications</div>
+            <div class="nav-item-meals">Meals</div>
+            <div class="nav-item-activities">Activites</div>
+            <div class="nav-item-messages">Messages</div>
+            <div class="nav-item-family">Family</div>
+            <div class="nav-item-support">Support</div>
+            <div class="nav-item-signout">Sign out</div>
+          </nav>
+          <div class="user-email">annie.marie@gmail.com</div>
+        </div>
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="search-bar">
+        <label for="search" class="visually-hidden">Search</label>
+        <div class="search-input">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c263e9ae08345903bbe87b9026289f257c15bedae388e67442f45a4d7737d47b?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="" class="search-icon" />
+          <input type="search" id="search" placeholder="Search" class="search-text" />
+        </div>
+        <div class="dashboard">
+          <div class="dashboard-grid">
+            <section class="dashboard-item">
+              <div class="medication-schedule">Medication Schedule</div>
+            </section>
+            <section class="dashboard-item">
+              <div class="todays-meals">Today's Meals</div>
+            </section>
+            <section class="dashboard-item">
+              <div class="activities">Your Activities for Today</div>
+            </section>
+            <section class="dashboard-item">
+              <div class="connect">Connect</div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
