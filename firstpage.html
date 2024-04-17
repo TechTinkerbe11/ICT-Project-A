@@ -23,7 +23,7 @@
     font-weight: 700;
     text-align: center;
     line-height: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   @media (max-width: 991px) {
@@ -37,7 +37,7 @@
     aspect-ratio: 3.33;
     object-fit: auto;
     object-position: center;
-    width: 100%;
+    width: 80%;
   }
 
   @media (max-width: 991px) {
@@ -53,8 +53,12 @@
     background-color: #dae6ff;
     display: flex;
     gap: 8px;
-    margin: auto 0;
+    /*margin: auto 0;*/
     padding: 13px 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
   }
 
   @media (max-width: 991px) {
@@ -63,7 +67,7 @@
     }
   }
 
-  .help-icon {
+  .help-icon { 
     aspect-ratio: 0.64;
     object-fit: auto;
     object-position: center;
@@ -134,7 +138,7 @@
   }
 
   .welcome-title {
-    color: #ff0101;
+    color: /*#ff0101;*/ black;
     text-align: center;
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0);
@@ -191,6 +195,8 @@
     background-color: #f5dbdb;
     line-height: 98%;
     padding: 21px 17px;
+    font-size: 25px;
+    font-weight: bold;
   }
 
   @media (max-width: 991px) {
@@ -203,13 +209,15 @@
   .access-account-button {
     font-family: Inter, sans-serif;
     justify-content: center;
-    border-radius: 12.66px;
+    border-radius: 12.664px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
     border: 1px solid rgba(36, 99, 235, 1);
     background-color: #c4d4f7;
     margin-top: 12px;
-    line-height: 93%;
-    padding: 21px 16px 0;
+    line-height: 98%;
+    padding: 21px 17px ;
+    font-size: 25px;
+    font-weight: bold;
   }
 
   @media (max-width: 991px) {
@@ -285,14 +293,16 @@
 
   .contact-us {
     font-family: Inter, sans-serif;
+    color: black;
   }
 
   .accessibility {
     font-family: Inter, sans-serif;
+    color: black;
   }
 
   .privacy-policy {
-    color: #1a1a1a;
+    color: black;
     font-family: Inter, sans-serif;
   }
 
@@ -305,10 +315,12 @@
 
   .terms-of-service {
     font-family: Inter, sans-serif;
+    color: black;
   }
 
   .faq {
     font-family: Inter, sans-serif;
+    color: black;
   }
 </style>
 
