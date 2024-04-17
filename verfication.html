@@ -24,10 +24,8 @@
   }
 
   .header-text {
-    color: #b3b3b3;
-    -webkit-text-stroke: 1px #000;
+    color: black;
     text-transform: capitalize;
-    border: 1px solid #000;
     margin-top: 20px;
     width: 1283px;
     font: 800 45px/42px Inter, sans-serif;
@@ -37,6 +35,20 @@
     .header-text {
       max-width: 100%;
       font-size: 40px;
+      line-height: 41px;
+    }
+  }
+  .header-text1 {
+    color: black;
+    margin-top: 20px;
+    width: 1283px;
+    font: Inter, sans-serif;
+    font-size: 40px;
+  }
+
+  @media (max-width: 1000px) {
+    .header-text1 {
+      max-width: 100%;
       line-height: 41px;
     }
   }
@@ -170,14 +182,14 @@
 <div class="container">
   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d92764a87944edb734f12bd6e8a1a30f36c0aecf78a81a2b18af5bae56311fc?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Header image" class="header-image" />
   
-  <div class="header-text">
+  <div >
     <br />
-    <h1>Choose Verification Method</h1>
+    <h1 class="header-text">CHOOSE VERIFICATION METHOD</h1>
     <br /><br />
-    <p>
+    <p class="header-text1">
       To keep your account secure, we need to verify your identity. Please choose how you'd like to receive your verification code.
     </p>
-    <br /><br /><br /><br /><br /><br /><br />
+    <br />
   </div>
   
   <div class="verification-options">
