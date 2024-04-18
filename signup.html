@@ -1,428 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create New Account - GuardianAngel Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
+body, h1, h2, p, button, input, label {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px; /* Adjusted width to fit the image provided */
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: #FFFFFF;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 150px; /* Adjusted size */
+}
+
+.title {
+  flex-grow: 1; /* Allows title to take the available space */
+  text-align: center;
+  font-size: 1.75em; /* Adjusted size */
+  font-weight: 800;
+  color: #333; /* Adjusted color */
+}
+
+.help-button {
+  background: none;
+  border: 2px solid #2463EB;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: #2463EB;
+  cursor: pointer;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1em;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between; /* Adjusted for side-by-side layout */
+}
+
+.form-section {
+  background: #F7F7F7;
+  padding: 30px;
+  border-radius: 12px;
+  flex-basis: 50%;
+  margin-right: 30px; /* Space between form and testimonial */
+}
+
+.form-heading {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 1em;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  display: block;
+  width: 90%;
+}
+
+.signup-button {
+  background: #2463EB;
+  color: white;
+  padding: 20px 0;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 800;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.testimonial-section {
+  background: #F7F7F7;
+  padding: 30px;
+  border-radius: 20px;
+  flex-basis: 30%;
+  text-align: center; /* Center the testimonial text */
+}
+
+.testimonial {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the author info */
+}
+
+.author-photo {
+  width: 50px; /* Adjust size accordingly */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-text .author-name {
+  font-weight: 700;
+}
+
+.author-text .author-title {
+  font-size: 0.9em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
   .container {
-    background-color: #fff;
-    display: flex;
+    padding: 20px;
+  }
+  
+  .header, .main-content {
     flex-direction: column;
     align-items: center;
-    padding: 0 46px 68px 16px;
   }
 
-  @media (max-width: 991px) {
-    .container {
-      padding-right: 20px;
-    }
-  }
-
-  .header {
-    align-self: stretch;
-    display: flex;
-    width: 100%;
-    gap: 20px;
-  }
-
-  @media (max-width: 991px) {
-    .header {
-      max-width: 100%;
-      flex-wrap: wrap;
-    }
-  }
-
-  .header-content {
-    flex-grow: 1;
-    flex-basis: auto;
-  }
-
-  @media (max-width: 991px) {
-    .header-content {
-      max-width: 100%;
-    }
-  }
-
-  .header-inner {
-    gap: 20px;
-    display: flex;
-  }
-
-  @media (max-width: 991px) {
-    .header-inner {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-    }
-  }
-
-  .logo-column {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 46%;
-    margin-left: 0;
-  }
-
-  @media (max-width: 991px) {
-    .logo-column {
-      width: 100%;
-    }
-  }
-
-  .logo-img {
-    aspect-ratio: 3.57;
-    object-fit: auto;
-    object-position: center;
-    width: 100%;
-  }
-
-  @media (max-width: 991px) {
-    .logo-img {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
-  .title-column {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 54%;
-    margin-left: 20px;
-  }
-
-  @media (max-width: 991px) {
-    .title-column {
-      width: 100%;
-    }
-  }
-
-  .title {
-    color: #000;
-    text-align: center;
-    -webkit-text-stroke-width: 1;
-    -webkit-text-stroke-color: #000;
-    border: 1px solid rgba(0, 0, 0, 1);
-    margin-top: 123px;
-    font: 800 48px/87.5% Inter, sans-serif;
-  }
-
-  @media (max-width: 991px) {
-    .title {
-      max-width: 100%;
-      margin-top: 40px;
-      font-size: 40px;
-    }
+  .form-section, .testimonial-section {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .help-button {
-    justify-content: center;
-    border-radius: 12px;
-    border: 1px solid rgba(36, 99, 235, 1);
-    background-color: #dae6ff;
-    display: flex;
-    gap: 8px;
-    font-size: 24px;
-    color: #000;
-    font-weight: 700;
-    white-space: nowrap;
-    text-align: center;
-    line-height: 100%;
-    margin: auto 0;
-    padding: 13px 16px;
+    margin-top: 20px;
   }
+}
 
-  @media (max-width: 991px) {
-    .help-button {
-      white-space: initial;
-      padding: 0 20px;
-    }
-  }
-
-  .help-icon {
-    aspect-ratio: 0.64;
-    object-fit: auto;
-    object-position: center;
-    width: 21px;
-  }
-
-  .help-text {
-    font-family: Inter, sans-serif;
-    margin: auto 0;
-  }
-
-  .subtitle {
-    color: rgba(13, 13, 13, 0.7);
-    margin: 35px 0 0 71px;
-    font: 600 24px/117% Inter, sans-serif;
-  }
-
-  @media (max-width: 991px) {
-    .subtitle {
-      max-width: 100%;
-    }
-  }
-
-  .main-content {
-    margin-top: 112px;
-    width: 100%;
-    max-width: 1466px;
-  }
-
-  @media (max-width: 991px) {
-    .main-content {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
-  .main-inner {
-    gap: 20px;
-    display: flex;
-  }
-
-  @media (max-width: 991px) {
-    .main-inner {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-    }
-  }
-
-  .form-column {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 65%;
-    margin-left: 0;
-  }
-
-  @media (max-width: 991px) {
-    .form-column {
-      width: 100%;
-    }
-  }
-
-  .form-container {
-    justify-content: space-between;
-    border-radius: 12px;
-    border: 1px solid rgba(179, 179, 179, 1);
-    background-color: #fff;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    font-size: 32px;
-    color: #0d0d0d;
-    font-weight: 600;
-    line-height: 87.5%;
-    width: 100%;
-    padding: 20px 32px 32px;
-  }
-
-  @media (max-width: 991px) {
-    .form-container {
-      max-width: 100%;
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
-
-  .form-title {
-    color: #000;
-    text-align: center;
-    align-self: center;
-    font: 700 40px/105% Inter, sans-serif;
-  }
-
-  .form-label {
-    color: #000;
-    font-family: Inter, sans-serif;
-    margin-top: 54px;
-  }
-
-  @media (max-width: 991px) {
-    .form-label {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
-  .form-input {
-    align-items: start;
-    border-radius: 12px;
-    border: 1px solid rgba(179, 179, 179, 1);
-    background-color: #fff;
-    margin-top: 12px;
-    justify-content: center;
-    padding: 15px 16px;
-    font: 500 24px/117% Inter, sans-serif;
-  }
-
-  @media (max-width: 991px) {
-    .form-input {
-      max-width: 100%;
-      padding-right: 20px;
-    }
-  }
-
-  .testimonial-column {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 35%;
-    margin-left: 20px;
-  }
-
-  @media (max-width: 991px) {
-    .testimonial-column {
-      width: 100%;
-    }
-  }
-
-  .testimonial-container {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
-  }
-
-  @media (max-width: 991px) {
-    .testimonial-container {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
-  .quote-icon {
-    aspect-ratio: 1.3;
-    object-fit: auto;
-    object-position: center;
-    width: 31px;
-    fill: #4d4d4d;
-  }
-
-  .testimonial-text {
-    color: #0d0d0d;
-    margin-top: 24px;
-    font: italic 400 24px/38px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-
-  @media (max-width: 991px) {
-    .testimonial-text {
-      max-width: 100%;
-    }
-  }
-
-  .author-container {
-    display: flex;
-    margin-top: 24px;
-    gap: 16px;
-    font-weight: 500;
-  }
-
-  @media (max-width: 991px) {
-    .author-container {
-      flex-wrap: wrap;
-    }
-  }
-
-  .author-img {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 44px;
-    border: 1px solid rgba(179, 179, 179, 1);
-    margin: auto 0;
-  }
-
-  .author-details {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .author-name {
-    color: #000;
-    font: 16px/150% Inter, sans-serif;
-  }
-
-  .author-title {
-    color: rgba(26, 26, 26, 0.36);
-    margin-top: 4px;
-    font: 18px/156% Inter, sans-serif;
-  }
-
-  .signup-button {
-    justify-content: center;
-    border-radius: 12px;
-    border: 1px solid rgba(36, 99, 235, 1);
-    background-color: #2463eb;
-    color: #fff;
-    text-align: center;
-    margin: 52px 0 0 132px;
-    padding: 21px 16px;
-    font: 800 48px/58% Inter, sans-serif;
-  }
-
-  @media (max-width: 991px) {
-    .signup-button {
-      font-size: 40px;
-      max-width: 100%;
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
 </style>
+</head>
+<body>
+
 
 <div class="container">
+  <!-- Header -->
   <header class="header">
-    <div class="header-content">
-      <div class="header-inner">
-        <div class="logo-column">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40bbd49fdb74c7563a481a8dd89976d7365fa9181dec1640f4272b7b51e06e44?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="GuardianAngel Care logo" class="logo-img" />
-        </div>
-        <div class="title-column">
-          <h1 class="title">CREATE NEW ACCOUNT</h1>
-        </div>
-      </div>
-    </div>
-    <button class="help-button">
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5bb8e5bdab26f2c7fbf41900564feadc9666515cbd150bcd7cb3da400d88fe0?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="" class="help-icon" />
-      <span class="help-text">HELP</span>
-    </button>
+    <!-- Logo -->
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40bbd49fdb74c7563a481a8dd89976d7365fa9181dec1640f4272b7b51e06e44?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="GuardianAngel Care logo" alt="GuardianAngel Care logo" class="logo" />
+    <!-- Title -->
+    <h1 class="title">CREATE NEW ACCOUNT</h1>
+    <!-- Help button -->
+    <button class="help-button">HELP</button>
   </header>
   
+  <!-- Subtitle -->
   <p class="subtitle">Join us and experience comprehensive care with ease</p>
   
-  <main class="main-content">
-    <div class="main-inner">
-      <div class="form-column">
-        <form class="form-container">
-          <h2 class="form-title">Fill in your details</h2>
-          
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" class="form-input" />
-          
-          <label for="username" class="form-label">Username</label>
-          <input type="text" id="username" placeholder="Enter your username" class="form-input" />
-          
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" id="phone" placeholder="Enter your phone number" class="form-input" />
-        </form>
-      </div>
-      <div class="testimonial-column">
-        <div class="testimonial-container">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/56bd5ae30a5e5d7504beb0dd9ddd828dd9c85aa82da201c81dff4541702eb69a?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="" class="quote-icon" />
-          <p class="testimonial-text">
-            GuardianAngel Care provides unparalleled peace of mind with compassionate and reliable support for those who matter most. Truly, care feels like home here.
-          </p>
-          <div class="author-container">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72cfc838e25dda0b200fd714d4202160575bf14d821b338ccae581d000a07df4?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Peter Francis" class="author-img" />
-            <div class="author-details">
-              <span class="author-name">Peter Francis</span>
-              <span class="author-title">Resident, GuardianAngel</span>
-            </div>
-          </div>
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Form section -->
+    <div class="form-section">
+      <h2 class="form-heading">Fill in your details</h2>
+      <!-- Form -->
+      <form>
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" placeholder="Please enter your Email here" />
+        
+        <label for="username"><b>Username</b></label>
+        <input type="text" id="username" placeholder="Please enter your Username here" />
+        
+        <label for="phone"><b>Phone Number</b></label>
+        <input type="tel" id="phone" placeholder="Please enter your Phone Number here" />
+        
+        <!-- Sign up button -->
+        <button class="signup-button">SIGN UP NOW</button>
+      </form>
+    </div>
+    
+    <!-- Testimonial section -->
+    <div class="testimonial-section">
+      <!-- Testimonial -->
+      <blockquote class="testimonial">
+        "GuardianAngel Care provides unparalleled peace of mind with compassionate and reliable support for those who matter most. Truly, care feels like home here."
+      </blockquote>
+      <!-- Author info -->
+      <div class="author-info">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72cfc838e25dda0b200fd714d4202160575bf14d821b338ccae581d000a07df4?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Peter Francis" class="author-photo" />
+        <div class="author-text">
+          <p class="author-name">Peter Francis</p>
+          <p class="author-title">Resident, GuardianAngel</p>
         </div>
       </div>
     </div>
-  </main>
-  
-  <button class="signup-button">SIGN UP NOW</button>
+  </div>
 </div>
+
+</body>
+</html>
