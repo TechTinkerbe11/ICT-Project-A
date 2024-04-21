@@ -5,93 +5,313 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Create New Account - GuardianAngel Care</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBl5JnmoWhahn0LGyDru3Fi_pVIW_YbIys",
-    authDomain: "ict-project-a-80462.firebaseapp.com",
-    databaseURL: "https://ict-project-a-80462-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "ict-project-a-80462",
-    storageBucket: "ict-project-a-80462.appspot.com",
-    messagingSenderId: "889303437179",
-    appId: "1:889303437179:web:db968358266443c78eb7de",
-    measurementId: "G-Z4G0X6NLL9"
-  };
 
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const analytics = firebase.getAnalytics(app);
-  const auth = firebase.auth();
-  const database = firebase.database();
-
-  function signUpUser() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const username = document.getElementById('username').value; // You might want to use this later
-    const phone = document.getElementById('phone').value; // You might want to use this later
-
-    auth.createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        // Optional: Save the username and phone in Firebase Realtime Database
-        const userId = user.uid;
-        database.ref('users/' + userId).set({
-          username: username,
-          email: email,
-          phone: phone
-        });
-
-        alert("User created successfully!");
-        // Redirect or clear form here
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert("Error: " + errorMessage);
-        // Handle Errors here.
-      });
-  }
-</script>
 <style>
-  /* Your existing CSS */
+
   body, h1, h2, p, button, input, label {
     font-family: 'Inter', sans-serif;
     margin: 0;
   }
-  /* Add more styles here */
-</style>
+  
+  .container {
+    max-width: 900px; /* Adjusted width to fit the image provided */
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: #FFFFFF;
+  }
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    width: 150px; /* Adjusted size */
+  }
+  
+  .title {
+    flex-grow: 1; /* Allows title to take the available space */
+    text-align: center;
+    font-size: 1.75em; /* Adjusted size */
+    font-weight: 800;
+    color: #333; /* Adjusted color */
+  }
+  
+  .help-button {
+    background: none;
+    border: 2px solid #2463EB;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #2463EB;
+    cursor: pointer;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 1em;
+    color: #777;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between; /* Adjusted for side-by-side layout */
+  }
+  
+  .form-section {
+    background: #F7F7F7;
+    padding: 30px;
+    border-radius: 12px;
+    flex-basis: 50%;
+    margin-right: 30px; /* Space between form and testimonial */
+  }
+  
+  .form-heading {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input {
+    font-size: 1em;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: block;
+    width: 90%;
+  }
+  
+  .signup-button {
+    background: #2463EB;
+    color: white;
+    padding: 20px 0;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 800;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+  
+  .testimonial-section {
+    background: #F7F7F7;
+    padding: 30px;
+    border-radius: 20px;
+    flex-basis: 30%;
+    text-align: center; /* Center the testimonial text */
+  }
+  
+  .testimonial {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the author info */
+  }
+  
+  .author-photo {
+    width: 50px; /* Adjust size accordingly */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author-text .author-name {
+    font-weight: 700;
+  }
+  
+  .author-text .author-title {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+    
+    .header, .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-section, .testimonial-section {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .help-button {
+      margin-top: 20px;
+    }
+  }
+  
+  </style>
 </head>
 <body>
+
 <div class="container">
+  <!-- Header -->
   <header class="header">
-    <img src="logo_url_here" alt="GuardianAngel Care logo" class="logo">
+    <!-- Logo -->
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40bbd49fdb74c7563a481a8dd89976d7365fa9181dec1640f4272b7b51e06e44?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="GuardianAngel Care logo" alt="GuardianAngel Care logo" class="logo" />
+    <!-- Title -->
     <h1 class="title">CREATE NEW ACCOUNT</h1>
+    <!-- Help button -->
     <button class="help-button">HELP</button>
   </header>
+  
+  <!-- Subtitle -->
   <p class="subtitle">Join us and experience comprehensive care with ease</p>
+  
+  <!-- Main content -->
   <div class="main-content">
+    <!-- Form section -->
     <div class="form-section">
       <h2 class="form-heading">Fill in your details</h2>
-      <form onsubmit="event.preventDefault(); signUpUser();">
+      <!-- Form -->
+      <form>
         <label for="email"><b>Email</b></label>
-        <input type="email" id="email" placeholder="Please enter your Email here" required>
-        <label for="password"><b>Password</b></label>
-        <input type="password" id="password" placeholder="Please enter your Password here" required>
+        <input type="email" id="email" placeholder="Please enter your Email  here " />
+        
         <label for="username"><b>Username</b></label>
-        <input type="text" id="username" placeholder="Please enter your Username here">
+        <input type="text" id="username" placeholder="Please enter your Username here" />
+        
         <label for="phone"><b>Phone Number</b></label>
-        <input type="tel" id="phone" placeholder="Please enter your Phone Number here">
-        <button type="submit" class="signup-button">SIGN UP NOW</button>
+        <input type="tel" id="phone" placeholder="Please enter your Phone Number here" />
+        
+        <!-- Sign up button -->
+        <button class="signup-button">SIGN UP NOW</button>
       </form>
+    </div>
+    
+    <!-- Testimonial section -->
+    <div class="testimonial-section">
+      <!-- Testimonial -->
+      <blockquote class="testimonial">
+        "GuardianAngel Care provides unparalleled peace of mind with compassionate and reliable support for those who matter most. Truly, care feels like home here."
+      </blockquote>
+      <!-- Author info -->
+      <div class="author-info">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72cfc838e25dda0b200fd714d4202160575bf14d821b338ccae581d000a07df4?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="Peter Francis" class="author-photo" />
+        <div class="author-text">
+          <p class="author-name">Peter Francis</p>
+          <p class="author-title">Resident, GuardianAngel</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-  <script src="auth.js"></script>
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+  // web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCIHRwbk8VcqwbGJdvZPsb0IF8lmSUvyPg",
+    authDomain: "guardianangel-a5258.firebaseapp.com",
+    projectId: "guardianangel-a5258",
+    storageBucket: "guardianangel-a5258.appspot.com",
+    messagingSenderId: "966688041368",
+    appId: "1:966688041368:web:2adfd80f71a67b154623ed",
+    measurementId: "G-RWDD8SSL9G"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getDatabase(app);
+
+  const actionCodeSettings = {
+  // The URL to redirect back to after the user clicks on the email link. 
+  // This URL should be a page in your app where you handle the sign-in process.
+  url: 'http://localhost:8080/signup.html', 
+  handleCodeInApp: true, // Must be true for email link sign-in
+};
+
+  // Function to send the sign-in link
+  function sendSignInLink(email) {
+    sendSignInLinkToEmail(auth, email, actionCodeSettings)
+      .then(() => {
+        window.localStorage.setItem('emailForSignIn', email); // Save the email to localStorage
+        alert('A sign-in link has been sent to your email address.');
+      })
+      .catch((error) => {
+        console.error('Error sending sign-in link', error);
+      });
+  }
+
+  // Check if the current URL can be used to complete sign-in
+  if (isSignInWithEmailLink(auth, window.location.href)) {
+    let email = window.localStorage.getItem('emailForSignIn');
+    if (!email) {
+      email = window.prompt('Please provide your email for confirmation');
+    }
+    
+    // Sign in the user with the email link
+    signInWithEmailLink(auth, email, window.location.href)
+      .then((result) => {
+        // Clear the email from localStorage
+        window.localStorage.removeItem('emailForSignIn');
+        
+        // Save additional user info in Firebase Realtime Database
+        const username = window.localStorage.getItem('usernameForSignIn');
+        const phone = window.localStorage.getItem('phoneForSignIn');
+        set(ref(db, 'users/' + result.user.uid), {
+          email: result.user.email,
+          username: username,
+          phone: phone
+        });
+
+        // Redirect to verification successful page
+        window.location.assign('http://localhost:8080/verficationSuccessful.html');
+      })
+      .catch((error) => {
+        console.error('Error signing in with email link', error);
+      });
+  }
+
+  // Event listener for the sign-up button
+  window.addEventListener('DOMContentLoaded', () => {
+    const signupButton = document.querySelector('.signup-button');
+    signupButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const username = document.getElementById('username').value;
+      const phone = document.getElementById('phone').value;
+      
+      // Store email and additional details in localStorage
+      window.localStorage.setItem('emailForSignIn', email);
+      window.localStorage.setItem('usernameForSignIn', username);
+      window.localStorage.setItem('phoneForSignIn', phone);
+
+      // Send the sign-in link to the user's email
+      sendSignInLink(email);
+    });
+  });
+</script>
+
 </body>
 </html>
-
