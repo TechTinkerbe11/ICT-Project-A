@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuardianAngel Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    color: #333;
+  }
+
+  .container {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+
+  .search-bar {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .sidebar {
+    width: 20%;
+    margin-right: 20px;
+  }
+
+  .sidebar .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+     .sidebar .nav-item {
+    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 10px; /* added margin for separation */
+    border: 1px solid rgba(122, 122, 122, 1); /* from your example */
+    border-radius: 10px;
+    background-color: #c4d4f7; /* from your example */
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .sidebar .nav-item:hover {
+    background-color: #b0c6f8; /* a lighter shade for hover effect */
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .dashboard {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  
+  .dashboard-item {
+    background: #f5dbdb; /* from your example */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25); /* from your example */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* from your example */
+  }
+
+  .dashboard-item h3 {
+    margin-top: 0;
+  }
+
+  /* More styles */
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div class="logo">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b33f407b0962ced5cfd36d2c9da55e423d0d53ff3c3c3398bf8f8fb67a5485dc?apiKey=1c4e84535c464efcba6b603408e9ff51&" alt="GuardianAngel Logo">
+    </div>
+    <div class="search-bar">
+      <input type="search" id="search" placeholder="Search" class="search-input">
+    </div>
+  </header>
+
+  <div class="content">
+    <aside class="sidebar">
+      <nav class="nav-menu">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">Medications</div>
+        <div class="nav-item">Meals</div>
+        <div class="nav-item">Activities</div>
+        <div class="nav-item">Messages</div>
+        <div class="nav-item">Family</div>
+        <div class="nav-item">Support</div>
+        <div class="nav-item">Sign out</div>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <div class="dashboard-item">
+        <h3>Medication Schedule</h3>
+        <p>Don't forget your medication at 2 PM today.</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Today's Meals</h3>
+        <p>Check out the healthy meal plan tailored for you.</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Your Activities for Today</h3>
+        <p>Join the afternoon yoga session at 4 PM.</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Connect</h3>
+        <p>Reach out to your loved ones with just a click.</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Upcoming Events</h3>
+        <p>Book club meeting on Friday at 3 PM.</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Recent Messages</h3>
+        <p>You have 3 new messages from the care team.</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
