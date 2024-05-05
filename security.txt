@@ -1,0 +1,18 @@
+# SECURITY.TXT
+# This file is intended to help security researchers report security vulnerabilities to you.
+
+# Contact Information
+Contact: 103824313@student.swin.edu.au
+Encryption: https://guardianangel-a5258.firebaseapp.com/
+
+# Preferred Languages
+Preferred-Languages: en
+
+# Vulnerability Disclosure Policy
+# Please report security vulnerabilities responsibly.
+# Do not disclose publicly until we have resolved the issue.
+# We appreciate your help in making our website secure.
+
+# Policy
+# Unauthorized access to this website, its systems, or data is prohibited.
+# Violators may be subject to prosecution.
